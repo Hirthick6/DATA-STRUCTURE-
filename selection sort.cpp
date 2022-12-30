@@ -1,20 +1,24 @@
 #include<iostream>
 using namespace std;
-void insertionSort(int arr[])
+void selectionsort(int arr[])
 {
-    int key;
-    int j=0;
-    for(int i=0;i<5;i++)
+for(int i=0;i<5;i++)
+{
+    int min=i;
+for(int j=i+1;j<5;j++)
+{
+    if(arr[j]<arr[min])
     {
-        key=arr[i];
-        j=i-1;
-        while(j>=0 && arr[j]>key)
-        {
-            arr[j+1]=arr[j];
-            j=j-1;
-        }
-        arr[j+1]=key;
+        min=j;
     }
+}
+if(min!=i)
+{
+      int temp=arr[min];
+    arr[min]=arr[i];
+    arr[i]=temp;
+}
+}
 }
 int main()
 {
@@ -30,7 +34,7 @@ int main()
         cout<<myarr[i]<<" ";
     }
       cout << endl;
-      insertionSort(myarr);
+      selectionsort(myarr);
 
       cout<<"Sorted array"<<endl;
       for(int i=0;i<5;i++)
@@ -38,4 +42,5 @@ int main()
         cout<<myarr[i]<<" ";
     }
 }
+
 

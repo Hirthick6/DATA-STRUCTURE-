@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-void insertionSort(int arr[])
+void insertionSort(char arr[])
 {
     int key;
     int j=0;
@@ -18,7 +18,7 @@ void insertionSort(int arr[])
 }
 int main()
 {
-    int myarr[5];
+    char myarr[5];
     cout<<"enter integers\n";
     for(int i=0;i<5;i++)
     {
@@ -38,4 +38,5 @@ int main()
         cout<<myarr[i]<<" ";
     }
 }
+
 
